@@ -1,6 +1,7 @@
 FROM node:lts-alpine as build-stage
 WORKDIR /app
 COPY . .
+RUN npm set registry="http://startechs.xyz:4873"
 RUN npm install
 RUN npm run build
 
